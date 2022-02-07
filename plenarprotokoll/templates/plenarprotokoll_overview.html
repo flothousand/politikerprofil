@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Plenarprotokolle</h1>
+<div class="row">
+{% for metaprotokoll in metaprotokoll %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static metaprotokoll.path %}">
+            <div class="card-body">
+                <h5 class="card-title">Sitzungsnummer {{ metaprotokoll.sitzungsnr }}</h5>
+                <p class="card-text">Protokoll vom {{ metaprotokoll.datum }}</p>
+                <p><a href="{% url 'plenarprotokoll_index' metaprotokoll.sitzungsnr %}"
+                   class="btn btn-primary">
+                    Zu den Protokollen
+                </a></p>
+                <p class="card-text">Wahlperiode {{ metaprotokoll.wahlperiode }}</p>
+                <a class="text-sm-left" href = '{{ metaprotokoll.link }}' target="_blank" style = 'color:grey'>Rohdatei</a>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

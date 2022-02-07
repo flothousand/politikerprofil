@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<!-- Jumbotron -->
+<div class="p-5 text-center bg-light" style="margin-top: 10px;">
+    <h1 class="mb-3">POLITIKERPROFIL.DE</h1>
+    <h4 class="mb-3">Fakten / Transparenz / Nachvollziehbarkeit</h4>
+    <p class="text-center" >Wir sind eine Non-Profit Seite die Reden von Politikern analysiert und zusammenfasst. Neben ausgewerteten Plenarprotokollen (also Reden die im Bundestag geschwungen werden ) können Politikerprofile eingesehen werden: Lieblingsthemen, Stimmungslage und verwendete Wörter werden analysiert. Bitte beachtet dass wir die Profile nach und nach verbessern.</p>
+</div>
+<!-- Jumbotron -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static 'img/profile.jpeg' %}">
+            <div class="card-body">
+                <h5 class="card-title">Verfügbare Politikerprofile</h5>
+                <p class="card-text">Wir legen für Politiker Profile an: wie oft haben Sie geredet, welche Themen waren beosnders beliebt, was wurde häufig gesagt. Die Profile sind im Aufbau.</p>
+                <a href="{% url 'profiles_index' %}"
+                   class="btn btn-primary">
+                    Zu den Profilen
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static 'img/bundestag.jpg' %}">
+            <div class="card-body">
+                <h5 class="card-title">Aktuelle Plenarprotokolle</h5>
+                <p class="card-text">Wir analysieren wöchentlich Reden aus dem Bundestag und wollen somit einen Einblick in das Gesprochene zu geben. Es werden nach und nach weitere Metriken hinzugefügt.</p>
+                <a href="{% url 'plenarprotokoll_overview' %}"
+                   class="btn btn-primary">
+                    Zu den Plenarprotokollen
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jumbotron -->
+<div class="p-5 text-center" style="margin-top: 58px;">
+    <h4 class="mb-3">Ihr könnt uns unterstützen. Alle Spenden werden für Server und Rechenpower verwendet :) </h4>
+    <a class="btn btn-primary" href="" role="button">Call to action</a>
+</div>
+<!-- Jumbotron -->
+
+{% endblock %}

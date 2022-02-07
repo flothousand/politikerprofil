@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Politikerprofile</h1><br>   
+<p class="text-sm-left" >Im Folgenden findet Ihr Politikerprofile basierend auf deren Reden im Bundestag. Da wir im Aufbau sind würden wir uns über euer Feedback freuen: Welche Insights wären interessant für euch? Gibt es zusätzliche Datenquellen die Ihr sehen wollt? Bitte Mail an  <a href="mailto:hello@landingdata.de"> hello@landingdata.de </a> - Danke !</p><br>
+<div class="row">
+{% for profiles in profiles %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <a href="{% url 'profiles_detail' profiles.pk %}" class = 'card mb-2'><img class="" src="{% static profiles.img_path_profil %}" onerror="this.onerror=null; this.src='{% static 'media/logo.png' %}'" alt ='Sorry - wir haben noch kein Bild aber arbeiten an den Profilen' height = '300' style="object-fit: contain"></a>
+            <div class="card-body">
+                <h5 class="card-title">{{ profiles.vorname }} {{ profiles.nachname }}</h5>
+                <p class="card-text">{{ profiles.fraktion }}</p>
+                <a href="{% url 'profiles_detail' profiles.pk %}"
+                   class="btn btn-primary">
+                    Profil einsehen
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}  

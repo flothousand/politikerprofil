@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ profiles.vorname }} {{ profiles.nachname }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{% static profiles.img_path_profil %}" alt="" width="100%" >
+    </div>
+    <div class="col-md-4">
+        <h5>Fraktion:</h5>
+        <p>{{ profiles.fraktion }}</p>
+        <h5>Anzahl der Reden in Wahlperiode 20:</h5>
+        <p>{{ profiles.redenanzahl }}</p>
+        <h5>Durchschnittliche Redelaenge:</h5>
+        <p>{{ profiles.redelaenge }}</p>
+        <h5>Lieblingswörter:</h5>
+        <p>1. {{ profiles.wordone }} <br>
+        2. {{ profiles.wordtwo }}<br>
+        3. {{ profiles.wordthree }}</p>
+        <h5>Entschuldigtes Fehlen:</h5>
+        <p>{{ profiles.entschuldigt }}</p>
+    </div>
+</div>
+{% endblock %}

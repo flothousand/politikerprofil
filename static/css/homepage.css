@@ -1,0 +1,29 @@
+/*.navbar{
+    background-color: #F6F5D7;
+    margin:0%;
+    padding: 0%;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.title1{
+    font-family: 'sans-serif';
+}*/
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+.logo{
+    height: 100px;
+    width: 80px;
+}
+
+.imgprofile {
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-size: cover;
+}

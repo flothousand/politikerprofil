@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Plenarprotokolle</h1>
+<div class="row">
+{% for plenarprotokoll in plenarprotokoll %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static plenarprotokoll.img_path_wordcloud %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ plenarprotokoll.vorname }} {{ plenarprotokoll.nachname }}</h5>
+                <p class="card-text">Fraktion: {{ plenarprotokoll.fraktion }}<br>
+                Rolle: {{ plenarprotokoll.rolle_lang }}</p>
+                <p class="card-text">Sitzungsnr {{ plenarprotokoll.sitzungsnr }} / Wahlperiode {{ plenarprotokoll.wahlperiode }}</p>
+                <a href="{% url 'plenarprotokoll_detail' plenarprotokoll.sitzungsnr plenarprotokoll.pk  %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

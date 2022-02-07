@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ plenarprotokoll.title }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{% static plenarprotokoll_detail.img_path_wordcloud %}" alt="" width="100%">
+    </div>
+    <div class="col-md-4">
+        <h5>About the plenarprotokoll:</h5>
+        <p>{{ plenarprotokoll_detail.ort }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ plenarprotokoll_detail.technology }}</p>
+    </div>
+</div>
+{% endblock %}
