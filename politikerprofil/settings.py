@@ -90,7 +90,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'politikerprofil',
             'USER': 'florian',
-            'PASSWORD': 'Flo160190',
+            'PASSWORD': 'standard123',
             'HOST': 'localhost',
             'PORT': '',
         }
