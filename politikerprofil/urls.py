@@ -22,4 +22,4 @@ urlpatterns = [
     path("profiles", include("profiles.urls")),
     path("plenarprotokoll", include("plenarprotokoll.urls")),
     path("impressum", include("impressum.urls")),
-]
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
