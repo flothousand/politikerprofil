@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#$6(n!mrdr(li9u9wdc-tx7lt$9z)=15v4z5t%@jkpc)u$$=7)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.politikerprofil.de','politikerprofil.de','134.209.248.173']
+ALLOWED_HOSTS = ['www.politikerprofil.de','politikerprofil.de','167.99.244.192']
 
 
 # Application definition
